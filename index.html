@@ -8,11 +8,22 @@
         <title> HTML5 Rocks! </title>
     </head>
     <body>
-        
         <section class="container">
             <h1 class="myFirstClass">Hello World!</h1> <!-- Styling via css -->
             <div class="firstBox">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
             <div class="secondBox">Est. 2020</div>
         </section>
+        <button id="buttonID">Click Me</button>
+        <script>
+            document.getElementById('buttonID').addEventListener('click', (e) => {
+                let containerEl = document.querySelector('.container');
+                
+                if (containerEl.style.flexDirection === 'row') {
+                    containerEl.style.flexDirection = 'column';
+                } else {
+                    containerEl.style.flexDirection = 'row';
+                }
+            });
+        </script>
     </body>
 </html>
